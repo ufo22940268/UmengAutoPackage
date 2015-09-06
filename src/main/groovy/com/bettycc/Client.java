@@ -1,4 +1,4 @@
-package org.gradle;
+package com.bettycc;
 
 import org.apache.tools.zip.ZipEntry;
 import org.apache.tools.zip.ZipFile;

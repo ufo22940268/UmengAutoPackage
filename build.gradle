@@ -23,7 +23,7 @@ test {
 }
 
 
-group = 'org.gradle'
+group = 'com.bettycc'
 version = '1.0-SNAPSHOT'
 
 uploadArchives {

@@ -1,0 +1,17 @@
+buildscript {
+    repositories {
+        maven {
+            url uri('../repo')
+        }
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: 'com.bettycc', name: 'umengauto',
+				  version: '1.0-SNAPSHOT'
+    }
+}
+
+task greeting(type: com.bettycc.UmengTask) {
+    channelFile = "channels.txt";
+    outFile = "/tmp/a.apk"
+}
