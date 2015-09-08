@@ -1,1 +1,2 @@
+include ':sample'
 rootProject.name = 'umengauto'
