@@ -11,7 +11,7 @@ buildscript {
     }
 }
 
-task greeting(type: com.bettycc.UmengTask) {
+task umengBuild(type: com.bettycc.UmengTask) {
     channelFile = "channels.txt";
     outFile = "/tmp/a.apk"
 }

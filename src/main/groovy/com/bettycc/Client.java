@@ -23,19 +23,7 @@ import java.util.Scanner;
 public class Client {
 
     private static final String CHANNELS_NAME = "channels.txt";
-    private static final String APK_NAME = "zssq.apk";
     private static Scanner scan = new Scanner(System.in);
-
-    public static void main(String[] args) throws Exception {
-        List<String> readChannels = readChannels();
-        System.out.println(
-                "please input apk path( or file name ,but package output path is ./out/***-channel.apk). default zssq.apk?");
-        String filepath = scan.nextLine();
-        if (filepath == null || filepath.trim().equals("")) {
-            filepath = APK_NAME;
-        }
-        startPackTask(filepath, readChannels);
-    }
 
     private static void readPack() throws Exception {
         String basePath = "/opt/";
@@ -127,7 +115,7 @@ public class Client {
             // entry.getCompressedSize() + "," + data.length);
             zot.closeEntry();
         }
-        zot.putNextEntry(new ZipEntry("META-INF/zssq_channel_" + channel));
+        zot.putNextEntry(new ZipEntry("META-INF/channel_" + channel));
         zot.closeEntry();
         zot.close();
     }
