@@ -1,4 +1,0 @@
-channels.txt
-:Author: cc
-:Email: cc@FrankMacBook-Pro-2.local
-:Date: 2015-09-07 07:15
