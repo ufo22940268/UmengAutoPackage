@@ -4,10 +4,13 @@ buildscript {
         maven {
             url "https://plugins.gradle.org/m2/"
         }
+        maven {
+            url uri('../repo')
+        }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:1.3.1"
-        classpath "gradle.plugin.com.bettycc:umengauto:1.0-SNAPSHOT"
+        classpath "gradle.plugin.com.bettycc:core:1.0-LOCAL"
     }
 }
 
@@ -44,9 +47,10 @@ dependencies {
 }
 
 
+
 task umengBuild(type: com.bettycc.UmengTask) {
     /**
-     *  生成的apk文件
+     *  编译生成的apk文件
      */
     outFile = "build/outputs/apk/sample-debug.apk"
 
@@ -55,3 +59,5 @@ task umengBuild(type: com.bettycc.UmengTask) {
      */
     channelFile = "channels.txt";
 }
+
+//apply plugin: 'umengauto'
