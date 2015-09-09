@@ -22,6 +22,8 @@
  1. 使用原来的方法打一个apk包。
 
  2. 在build.gradle里面继承打包插件。
+ 
+```groovy
     buildscript {
       repositories {
         maven {
@@ -34,19 +36,23 @@
     }
     
     apply plugin: "com.bettycc.umengauto"
+```
 
  3. 配置生成apk文件的位置和渠道列表
- task umengBuild(type: com.bettycc.UmengTask) {
-     /**
-      *  编译生成的apk文件
-      */
-     outFile = "build/outputs/apk/sample-debug.apk"
  
-     /**
-      * 你的umeng渠道的列表文件
-      */
-     channelFile = "channels.txt";
- }
+```groovy 
+       task umengBuild(type: com.bettycc.UmengTask) {
+           /**
+            *  编译生成的apk文件
+            */
+           outFile = "build/outputs/apk/sample-debug.apk"
+       
+           /**
+            * 你的umeng渠道的列表文件
+            */
+           channelFile = "channels.txt";
+       }
+```
  
  4. 这时候调用gradle umengBuild就能够开始批量打包了。
 
