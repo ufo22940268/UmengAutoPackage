@@ -1,17 +1,6 @@
 apply plugin: 'groovy'
 
-dependencies {
-    compile gradleApi()
-    compile localGroovy()
-}
-
 apply plugin: 'maven'
-
-//dependencies {
-//    testCompile 'junit:junit:4.12'
-//    compile 'org.apache.ant:ant:1.9.6'
-//
-//}
 
 test {
     testLogging {
@@ -32,32 +21,38 @@ buildscript {
     }
 }
 
-group = 'com.bettycc'
-version = '1.0-LOCAL'
+apply plugin: "com.gradle.plugin-publish"
 
 
-//apply plugin: "com.gradle.plugin-publish"
-//
-//dependencies {
-//    compile gradleApi()
-//    compile localGroovy() //not needed for Java plugins
-//    // other dependencies that your plugin requires
-//}
+repositories {
+    jcenter()
+}
 
-//// configured to publish your plugin to the plugin portal
-//pluginBundle {
-//    website = 'https://github.com/ufo22940268/UmengAutoPackage'
-//    vcsUrl = 'https://github.com/ufo22940268/UmengAutoPackage'
-//    description = '用闪电般的速度打100个友盟包，让你体验前所未有的快感'
-//    tags = ['umeng', 'package', 'android']
-//
-//    plugins {
-//        UmengPlugin {
-//            id = 'umengauto'
-//            displayName = 'umengauto'
-//        }
-//    }
-//}
+dependencies {
+    compile gradleApi()
+    compile localGroovy() //not needed for Java plugins
+    // other dependencies that your plugin requires
+    compile 'org.apache.ant:ant:1.9.6'
+}
+
+group = 'com.bettycc.umengauto'
+version = '1.0.1'
+
+
+// configured to publish your plugin to the plugin portal
+pluginBundle {
+    website = 'https://github.com/ufo22940268/UmengAutoPackage'
+    vcsUrl = 'https://github.com/ufo22940268/UmengAutoPackage'
+    description = '用闪电般的速度打100个友盟包，让你体验前所未有的快感'
+    tags = ['umeng', 'package', 'android']
+
+    plugins {
+        umengPlugin {
+            id = 'com.bettycc.umengauto'
+            displayName = 'Umeng auto package'
+        }
+    }
+}
 
 uploadArchives {
     repositories {

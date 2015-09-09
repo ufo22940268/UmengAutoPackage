@@ -2,4 +2,4 @@
 set -e
 
 gradle -b core/build.gradle uploadArchives
-gradle -b sample/build.gradle hello
+gradle -b sample/build.gradle umengBuild
