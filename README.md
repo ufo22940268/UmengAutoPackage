@@ -31,7 +31,7 @@
         }
       }
       dependencies {
-        classpath "gradle.plugin.com.bettycc.umengauto:core:1.0"
+        classpath "gradle.plugin.com.bettycc.umengauto:core:1.0.2"
       }
     }
     
