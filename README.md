@@ -21,7 +21,7 @@
 -----------------------
  1. 使用原来的方法打一个apk包。
 
- 2. 在build.gradle里面继承打包插件。
+ 2. 在build.gradle里面集成打包插件。
  
 ```groovy
     buildscript {
