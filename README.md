@@ -19,9 +19,9 @@
 
 批量打包
 -----------------------
-1. 使用原来的方法打一个apk包。
-2. 
-2. 在build.gradle里面继承打包插件。
+ 1 使用原来的方法打一个apk包。
+
+ 2 在build.gradle里面继承打包插件。
     buildscript {
       repositories {
         maven {
@@ -35,7 +35,7 @@
     
     apply plugin: "com.bettycc.umengauto"
 
-3.配置生成apk文件的位置和渠道列表
+ 3 配置生成apk文件的位置和渠道列表
  task umengBuild(type: com.bettycc.UmengTask) {
      /**
       *  编译生成的apk文件
@@ -48,9 +48,9 @@
      channelFile = "channels.txt";
  }
  
-4.这时候调用gradle umengBuild就能够开始批量打包了。
+ 4 这时候调用gradle umengBuild就能够开始批量打包了。
 
-5.如果你用sample中的代码进行测试的话，你可以在运行生成的apk来查看每个包的umeng渠道名。
+ 5 如果你用sample中的代码进行测试的话，你可以在运行生成的apk来查看每个包的umeng渠道名。
 
 特别感谢
 =================================
