@@ -7,7 +7,7 @@ class UmengPlugin implements Plugin<Project> {
 
     void apply(Project project) {
         project.extensions.create('umeng', UmengPluginExtension)
-        target.task('hello') << {
+        project.task('hello') << {
             println "apk: ${project.umeng.apk}"
         }
     }
